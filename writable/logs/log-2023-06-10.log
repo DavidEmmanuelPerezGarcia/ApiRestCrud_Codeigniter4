@@ -1,0 +1,518 @@
+ERROR - 2023-06-10 19:41:43 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'apirestcodeigin...', 3306, '', 0)
+#1 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xammp\htdocs\ApiRestCodeigniter4\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xammp\htdocs\ApiRestCodeigniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xammp\htdocs\ApiRestCodeigniter4\app\Controllers\CategoriasController.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(934): App\Controllers\CategoriasController->index()
+#8 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+#9 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xammp\htdocs\ApiRestCodeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xammp\htdocs\ApiRestCodeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xammp\htdocs\ApiRestCodeigniter4\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xammp\htdocs\ApiRestCodeigniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xammp\htdocs\ApiRestCodeigniter4\app\Controllers\CategoriasController.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(934): App\Controllers\CategoriasController->index()
+#7 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+#8 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xammp\htdocs\ApiRestCodeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xammp\htdocs\ApiRestCodeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-10 19:41:43 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categorias`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CategoriasController.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+ERROR - 2023-06-10 19:44:47 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xammp\htdocs\ApiRestCodeigniter4\system\Model.php(840): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\xammp\htdocs\ApiRestCodeigniter4\app\Controllers\CategoriasController.php(20): CodeIgniter\Model->__call('getWhere', Array)
+#6 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(934): App\Controllers\CategoriasController->show('1')
+#7 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+#8 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xammp\htdocs\ApiRestCodeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xammp\htdocs\ApiRestCodeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-10 19:44:47 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `categorias`
+WHERE `id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `categorias`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `categorias`
+WHERE `id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categorias`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\CategoriasController.php(20): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 19:49:57 --> Undefined array key "nombre"
+in APPPATH\Controllers\CategoriasController.php on line 31.
+ 1 APPPATH\Controllers\CategoriasController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'D:\\xammp\\htdocs\\ApiRestCodeigniter4\\app\\Controllers\\CategoriasController.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 19:50:46 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 19:52:33 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 19:53:31 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 19:53:53 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 19:54:22 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 19:56:00 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 19:56:09 --> Undefined array key "nombre"
+in APPPATH\Controllers\CategoriasController.php on line 31.
+ 1 APPPATH\Controllers\CategoriasController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'D:\\xammp\\htdocs\\ApiRestCodeigniter4\\app\\Controllers\\CategoriasController.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 19:57:42 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 19:58:10 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:01:32 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Database\BaseBuilder.php on line 2767.
+ 1 SYSTEMPATH\Model.php(456): CodeIgniter\Database\BaseBuilder->delete()
+ 2 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete(null, false)
+ 3 APPPATH\Controllers\CategoriasController.php(55): CodeIgniter\BaseModel->delete(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->deleteCategoria()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+ERROR - 2023-06-10 20:01:54 --> mysqli_sql_exception: Unknown column 'categorias.id' in 'where clause' in D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xammp\htdocs\ApiRestCodeigniter4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xammp\htdocs\ApiRestCodeigniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '1')
+#6 D:\xammp\htdocs\ApiRestCodeigniter4\app\Controllers\CategoriasController.php(52): CodeIgniter\BaseModel->find('1')
+#7 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(934): App\Controllers\CategoriasController->deleteCategoria('1')
+#8 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+#9 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xammp\htdocs\ApiRestCodeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xammp\htdocs\ApiRestCodeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-10 20:01:54 --> Unknown column 'categorias.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = :categorias.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\CategoriasController.php(52): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->deleteCategoria('1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+ERROR - 2023-06-10 20:02:34 --> mysqli_sql_exception: Unknown column 'categorias.id' in 'where clause' in D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xammp\htdocs\ApiRestCodeigniter4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xammp\htdocs\ApiRestCodeigniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '1')
+#6 D:\xammp\htdocs\ApiRestCodeigniter4\app\Controllers\CategoriasController.php(52): CodeIgniter\BaseModel->find('1')
+#7 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(934): App\Controllers\CategoriasController->deleteCategoria('1')
+#8 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+#9 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xammp\htdocs\ApiRestCodeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xammp\htdocs\ApiRestCodeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-10 20:02:34 --> Unknown column 'categorias.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = :categorias.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\CategoriasController.php(52): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->deleteCategoria('1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+ERROR - 2023-06-10 20:05:12 --> mysqli_sql_exception: Unknown column 'categorias.id' in 'where clause' in D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xammp\htdocs\ApiRestCodeigniter4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xammp\htdocs\ApiRestCodeigniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '1')
+#6 D:\xammp\htdocs\ApiRestCodeigniter4\app\Controllers\CategoriasController.php(52): CodeIgniter\BaseModel->find('1')
+#7 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(934): App\Controllers\CategoriasController->deleteCategoria('1')
+#8 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+#9 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xammp\htdocs\ApiRestCodeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xammp\htdocs\ApiRestCodeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-10 20:05:12 --> Unknown column 'categorias.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = :categorias.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\CategoriasController.php(52): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->deleteCategoria('1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+ERROR - 2023-06-10 20:05:39 --> mysqli_sql_exception: Unknown column 'categorias.id' in 'where clause' in D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xammp\htdocs\ApiRestCodeigniter4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xammp\htdocs\ApiRestCodeigniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '0')
+#6 D:\xammp\htdocs\ApiRestCodeigniter4\app\Controllers\CategoriasController.php(52): CodeIgniter\BaseModel->find('0')
+#7 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(934): App\Controllers\CategoriasController->deleteCategoria('0')
+#8 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+#9 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xammp\htdocs\ApiRestCodeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xammp\htdocs\ApiRestCodeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-10 20:05:39 --> Unknown column 'categorias.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'0\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'0\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'0\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = :categorias.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '0')
+ 7 APPPATH\Controllers\CategoriasController.php(52): CodeIgniter\BaseModel->find('0')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->deleteCategoria('0')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+ERROR - 2023-06-10 20:06:23 --> mysqli_sql_exception: Unknown column 'categorias.id' in 'where clause' in D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xammp\htdocs\ApiRestCodeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xammp\htdocs\ApiRestCodeigniter4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xammp\htdocs\ApiRestCodeigniter4\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '0')
+#6 D:\xammp\htdocs\ApiRestCodeigniter4\app\Controllers\CategoriasController.php(52): CodeIgniter\BaseModel->find('0')
+#7 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(934): App\Controllers\CategoriasController->deleteCategoria('0')
+#8 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+#9 D:\xammp\htdocs\ApiRestCodeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xammp\htdocs\ApiRestCodeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xammp\htdocs\ApiRestCodeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-10 20:06:23 --> Unknown column 'categorias.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'0\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'0\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = \'0\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categorias`
+WHERE `categorias`.`id` = :categorias.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '0')
+ 7 APPPATH\Controllers\CategoriasController.php(52): CodeIgniter\BaseModel->find('0')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->deleteCategoria('0')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:07:39 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:08:57 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:10:23 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:10:54 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:11:12 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:13:52 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:17:11 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:18:50 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:18:55 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:19:08 --> Allowed fields must be specified for model: "App\Models\CategoriasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoriasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\CategoriasController.php(36): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:26:11 --> Allowed fields must be specified for model: "App\Models\PersonasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\PersonasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\PersonasController.php(39): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PersonasController->insertarPersona()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:28:17 --> Allowed fields must be specified for model: "App\Models\PersonasModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\PersonasModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\PersonasController.php(39): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PersonasController->insertarPersona()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
+CRITICAL - 2023-06-10 20:30:01 --> Undefined array key "descripcion"
+in APPPATH\Controllers\CategoriasController.php on line 32.
+ 1 APPPATH\Controllers\CategoriasController.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'D:\\xammp\\htdocs\\ApiRestCodeigniter4\\app\\Controllers\\CategoriasController.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoriasController->insertCategoria()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriasController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xammp\\htdocs\\ApiRestCodeigniter4\\public\\index.php')
