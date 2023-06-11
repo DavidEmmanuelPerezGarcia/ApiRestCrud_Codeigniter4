@@ -29,5 +29,26 @@ class UsuariosController extends ResourceController{
             return $this->failNotFound("Datos no encontrados del id:".$id);
         }
     }
+
+    //metodo para insertar usuarios
+    public function insertUsuarios(){
+        $datos=[
+            "nombre"=>$_POST["nombre"],
+            "contraseña"=>$_POST["contraseña"]
+        ];
+
+        $model=new UsuariosModel();
+        $model->insert($datos);
+
+        $reponse=[
+            "status"=>200,
+            "error"=>null,
+            "messages"=>[
+                "success"=>"Datos insertados correctamente"
+            ]
+        ];
+
+        return $this->respondCreated($reponse,200);
+    }
 }
 ?>
