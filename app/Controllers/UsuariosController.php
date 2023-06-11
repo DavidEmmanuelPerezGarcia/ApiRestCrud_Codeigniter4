@@ -34,7 +34,7 @@ class UsuariosController extends ResourceController{
     public function insertUsuarios(){
         $datos=[
             "nombre"=>$_POST["nombre"],
-            "contraseña"=>$_POST["contraseña"]
+            "contraseña"=>sha1($_POST["contraseña"])
         ];
 
         $model=new UsuariosModel();
