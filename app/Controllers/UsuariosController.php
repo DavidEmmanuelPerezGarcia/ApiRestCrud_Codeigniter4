@@ -82,5 +82,31 @@ class UsuariosController extends ResourceController{
         return $this->respond($reponse,200);
 
     }
+
+    //metodo para eliminar los datos del usuario
+    public function deleteUsuario($id=null){
+        $model=new UsuariosModel();
+
+        $data=$model->find($id);
+
+        switch (true) {
+            case $data:
+                $model->delete($id);
+                $reponse=[
+                    "status"=>200,
+                    "error"=>null,
+                    "messages"=>[
+                        "success"=>"Datos eliminados correctamente :)"
+                    ]
+                ];
+
+                return $this->respond($reponse);
+                break;
+            
+            default:
+                return $this->failNotFound("No se encontro el id:".$id);
+                break;
+        }
+    }
 }
 ?>

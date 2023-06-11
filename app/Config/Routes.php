@@ -50,6 +50,7 @@ $routes->get("/usuarios","UsuariosController::index");
 $routes->get("/usuarios/(:any)","UsuariosController::idUser/$1");
 $routes->post("/usuarios","UsuariosController::insertUsuarios");
 $routes->put("/usuarios/(:any)","UsuariosController::updateUsuario/$1");
+$routes->delete("/usuarios/(:any)","UsuariosController::deleteUsuario/$1");
 
 /*
  * --------------------------------------------------------------------
