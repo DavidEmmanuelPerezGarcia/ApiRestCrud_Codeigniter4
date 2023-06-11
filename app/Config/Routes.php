@@ -49,6 +49,7 @@ $routes->put("categorias/(:any)","CategoriasController::updateCategoria/$1");
 $routes->get("/usuarios","UsuariosController::index");
 $routes->get("/usuarios/(:any)","UsuariosController::idUser/$1");
 $routes->post("/usuarios","UsuariosController::insertUsuarios");
+$routes->put("/usuarios/(:any)","UsuariosController::updateUsuario/$1");
 
 /*
  * --------------------------------------------------------------------

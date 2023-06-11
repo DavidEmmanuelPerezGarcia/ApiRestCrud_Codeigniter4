@@ -50,5 +50,37 @@ class UsuariosController extends ResourceController{
 
         return $this->respondCreated($reponse,200);
     }
+
+    //metodo para actualizar
+    public function updateUsuario($id=null){
+        $model= new UsuariosModel();
+        $json=$this->request->getJSON();
+
+        if($json){
+
+            $datos=[
+                "nombre"=>$json->nombre,
+                "contraseña"=>$_POST($json->contraseña)
+            ];
+        }else{
+            $input =$this->request->getRawInput();
+            $datos=[
+                "nombre"=>$input["nombre"],
+                "contraseña"=>sha1($input["contraseña"])
+            ];
+        }
+
+        $model->update($id,$datos);
+        $reponse=[
+            "status"=>200,
+            "error"=>null,
+            "messages"=>[
+                "success"=>"Datos actualizados :)"
+            ]
+        ];
+
+        return $this->respond($reponse,200);
+
+    }
 }
 ?>
