@@ -44,6 +44,11 @@ $routes->post("/categorias","CategoriasController::insertCategoria");
 $routes->delete("/categorias/(:any)","CategoriasController::deleteCategoria/$1");
 $routes->put("categorias/(:any)","CategoriasController::updateCategoria/$1");
 
+//usuarios
+
+$routes->get("/usuarios","UsuariosController::index");
+$routes->get("/usuarios/(:any)","UsuariosController::idUser/$1");
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

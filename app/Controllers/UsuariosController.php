@@ -16,5 +16,18 @@ class UsuariosController extends ResourceController{
 
         return $this->respond($datos,200);
     }
+
+    //metodo para traer un usuario por id
+
+    public function idUser($id=null){
+        $model = new UsuariosModel();
+        $datos=$model->getWhere(["id_usuario"=>$id])->getResult();
+
+        if($datos){
+            return $this->respond($datos,200);
+        }else{
+            return $this->failNotFound("Datos no encontrados del id:".$id);
+        }
+    }
 }
 ?>
