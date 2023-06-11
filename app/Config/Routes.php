@@ -52,6 +52,9 @@ $routes->post("/usuarios","UsuariosController::insertUsuarios");
 $routes->put("/usuarios/(:any)","UsuariosController::updateUsuario/$1");
 $routes->delete("/usuarios/(:any)","UsuariosController::deleteUsuario/$1");
 
+//articulos
+$routes->get("/articulos","ArticulosController::index");
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
